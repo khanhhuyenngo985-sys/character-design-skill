@@ -1,0 +1,36 @@
+{
+  "last_updated": "2026-04-15T00:00:00Z",
+  "description": "白梦客场景插画提示词模式库 - 从迭代成功结果中逆向提取的可复用模式",
+  "patterns": [
+    {
+      "id": "pattern-001",
+      "name": "暮色渐变层次",
+      "category": "色调",
+      "prompt_fragment": "暮色渐浓，天边最后一抹橙红",
+      "score_boost": "+8分",
+      "applies_to": ["古桥", "山林", "废墟"],
+      "extracted_from": "B7-L-T iteration-13",
+      "extracted_at": "2026-04-13"
+    },
+    {
+      "id": "pattern-002",
+      "name": "天空色水面",
+      "category": "构图",
+      "prompt_fragment": "倒影与天际相融，水面如镜",
+      "score_boost": "+6分",
+      "applies_to": ["古桥", "水乡", "湖泊"],
+      "extracted_from": "B7-L-T iteration-13",
+      "extracted_at": "2026-04-13"
+    },
+    {
+      "id": "pattern-003",
+      "name": "枯树横斜",
+      "category": "氛围",
+      "prompt_fragment": "枯树横斜，枝丫伸展",
+      "score_boost": "+4分",
+      "applies_to": ["古桥", "废墟", "山林"],
+      "extracted_from": "B7-L-T iteration-13",
+      "extracted_at": "2026-04-13"
+    }
+  ]
+}
