@@ -47,6 +47,16 @@ v2.1 升级内容：
 | [Katna](https://github.com/keplerlab/Katna) | 1.1k | ML智能关键帧提取 |
 | [VideoContext-Engine](https://github.com/dolphin-creator/VideoContext-Engine) | 新 | Whisper ASR + Qwen3-VL全流程（需GPU） |
 
+## 启动检查点
+
+激活后，先确认以下信息再开始分析：
+
+1. **视频来源**：本地文件路径 or 需要下载？
+2. **分析深度**：快速拆解（色彩+节奏）or 完整报告（含音频+构图）？
+3. **输出用途**：学习竞品 / 建案例库 / AI生成参考？
+
+> 确认后再执行，避免跑完才发现方向不对。
+
 ## 使用方式
 
 ### 方式一：命令行快速分析
