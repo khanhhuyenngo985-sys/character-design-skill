@@ -1,0 +1,11 @@
+timestamp	commit	skill	old_score	new_score	status	dimension	note	eval_mode
+2026-04-19T14:24	57d9a74	video-reverse-engineer	57.7	62.5	keep	Frontmatter质量	添加标准YAML frontmatter含触发词	dry_run
+2026-04-19T14:26	72fb130	video-reverse-engineer	62.5	65.3	keep	检查点设计	添加启动确认检查点	dry_run
+2026-04-19T14:26	f083051	video-reverse-engineer	65.3	68.3	keep	整体架构	添加TL;DR速查入口	dry_run
+2026-04-19T14:33	94961e8	video-prompt-schema	57.7	61.7	keep	Frontmatter质量	替换为标准YAML frontmatter	dry_run
+2026-04-19T14:33	4df9b5c	video-prompt-schema	61.7	64.7	keep	整体架构	添加TL;DR和启动检查点	dry_run
+2026-04-19T14:33	be78a02	video-prompt-schema	64.7	67.7	keep	边界条件	添加边界条件处理表	dry_run
+2026-04-19T14:43	0a361e5	video-analysis	59.2	63.2	keep	Frontmatter质量	替换为标准YAML frontmatter	dry_run
+2026-04-19T14:43	a2f45aa	video-analysis	63.2	65.3	keep	检查点设计	添加启动确认检查点	dry_run
+2026-04-19T14:43	ddcabea	video-analysis	65.3	68.3	keep	整体架构	添加TL;DR速查	dry_run
+2026-04-19T14:52	merge01	video-prompt-writer	72.0	82.0	keep	整合	将video-prompt-schema整合进video-prompt-writer：TL;DR+检查点+边界条件+Schema章节+平台化输出示例	dry_run
