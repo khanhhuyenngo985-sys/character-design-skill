@@ -1,0 +1,9 @@
+opencv-python-headless
+numpy
+Pillow
+scikit-image
+scipy
+wavio
+scikit-learn
+scenedetect
+mlx-whisper

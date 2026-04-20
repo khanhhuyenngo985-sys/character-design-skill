@@ -1,0 +1,392 @@
+{
+  "meta": {
+    "version": "v1.0",
+    "date": "2026-04-07",
+    "source": "BxA风格融合完整矩阵.md",
+    "platforms": ["Seedance", "Vidu", "海螺"]
+  },
+  "b_styles": {
+    "B1": {
+      "name": "超现实 + 色域绘画 + 生物形态",
+      "category": "通用线·生物形态抽象",
+      "palette": {
+        "primary": "#6B5344",
+        "secondary": "#7A8B8F",
+        "accent": "#8B3A3A",
+        "notes": "深驼褐主色，血色域点缀10-15%，青灰雾生物形态"
+      },
+      "lighting": "侧逆光+琥珀神光+烟雾散射",
+      "composition": "70%负空间，极简留白，前景遮挡",
+      "rhythm": "长镜头凝视70%，抽帧慢动作20%，硬切断刀10%",
+      "texture": "Kodak Ektachrome 1970s，35mm粗粒",
+      "mj_params": {"ar": "21:9", "s_range": [180, 250], "c_range": [20, 35], "weird_range": [80, 120]}
+    },
+    "B2": {
+      "name": "赛博朋克 + 故障艺术 + 欧普艺术",
+      "category": "数字视觉·感知扭曲",
+      "palette": {
+        "primary": "大地色50%+赛博霓虹20%",
+        "secondary": "RGB故障10%",
+        "notes": "数字污染古典构图"
+      },
+      "lighting": "霓虹漫射+数字干扰纹",
+      "composition": "Op Art几何条纹叠加古典构图",
+      "rhythm": "跳切节奏，故障帧插入",
+      "texture": "数字信号质感与胶片颗粒对抗",
+      "mj_params": {"ar": "2.35:1", "s_range": [450, 750], "c_range": null, "weird_range": null}
+    },
+    "B3": {
+      "name": "梦核 + 蒸汽波 + 超现实",
+      "category": "复古未来·数字怀旧",
+      "palette": {
+        "primary": "Amber Gold #FFBF00",
+        "secondary": "Celadon #88B892",
+        "accent": "Hot pink neon",
+        "notes": "VHS追踪错误，CRT扫描线叠加"
+      },
+      "lighting": "VHS色彩溢出，蒸汽波柔焦",
+      "composition": "liminal space超现实纵深",
+      "rhythm": "慢动作记忆流，超现实时间扭曲",
+      "texture": "CRT扫描线叠加，VHS追踪错误",
+      "mj_params": {"ar": "2.35:1", "s_range": [200, 300], "c_range": null, "weird_range": null}
+    },
+    "B4": {
+      "name": "极简 + 装饰艺术 + 新古典",
+      "category": "高定线·克制奢华",
+      "palette": {
+        "primary": "Warm white #F5E6D3",
+        "secondary": "Aged brass #C9A227",
+        "accent": "Hollywood shadow #1A1A1A",
+        "notes": "新古典比例，装饰艺术几何"
+      },
+      "lighting": "自然光50%+单一强光源30%+极轻霓虹20%",
+      "composition": "60%+负空间，黄金分割，16:9或2.35:1",
+      "rhythm": "长镜头凝视60%，静默留白30%，偶尔快切10%",
+      "texture": "16mm/35mm胶片，过曝1/3档，轻颗粒",
+      "mj_params": {"ar": "2.35:1", "s_range": [150, 250], "c_range": null, "weird_range": null}
+    },
+    "B5": {
+      "name": "怪核 + 童核 + 苍白核",
+      "category": "失落童心·可爱恐怖",
+      "palette": {
+        "primary": "#E8B4CB",
+        "secondary": "#E8D4D4",
+        "accent": "#C4D4C4",
+        "notes": "褪色糖果粉，苍白粉，病态绿"
+      },
+      "lighting": "过曝日光，苍白阴影",
+      "composition": "比例失调，童物与荒凉场景并置",
+      "rhythm": "静态长镜头，恐怖静默",
+      "texture": "35mm胶片，颗粒感，liminal space",
+      "mj_params": {"ar": "2.35:1", "s_range": [200, 600], "c_range": [15, 45], "weird_range": [50, 130]}
+    }
+  },
+  "a_styles": {
+    "A1": {
+      "name": "胡金铨 × Hollywood Golden Age",
+      "fusion_core": "禅意静谧 × 戏剧张力",
+      "palette": {
+        "primary": "深驼褐 #6B5344",
+        "secondary": "苍青 #7BA3A8",
+        "accent": "琥珀 #C9A86C"
+      },
+      "lighting": "侧逆光+烟雾散射70%，戏剧化神光",
+      "composition": "前景遮挡+极简留白70%，水平构图",
+      "rhythm": "长镜头留白70%，抽帧慢动作20%",
+      "texture": "Kodak Ektachrome 1970s，2.35:1",
+      "directors": ["胡金铨", "Hollywood Golden Age"],
+      "keywords": ["禅意", "古典", "戏剧", "留白"]
+    },
+    "A2": {
+      "name": "王家卫 × French New Wave",
+      "fusion_core": "记忆碎片 × 存在自由",
+      "palette": {
+        "primary": "Mongkok Cyan #2A4B5C",
+        "secondary": "珊瑚红 #D4527A",
+        "accent": "琥珀暖 #C9A86C"
+      },
+      "lighting": "霓虹黄绿偏色，潮湿感，琥珀街灯",
+      "composition": "手持不安，跟拍，倾斜构图",
+      "rhythm": "抽帧，慢动作，步进打印",
+      "texture": "颗粒感，色彩溢出，湿润",
+      "directors": ["王家卫", "French New Wave"],
+      "keywords": ["记忆", "孤独", "都市", "碎片"]
+    },
+    "A3": {
+      "name": "北野武 × German Expressionism",
+      "fusion_core": "沉默暴力 × 阴影戏剧化",
+      "palette": {
+        "primary": "北野武蓝灰 #2d3a4a",
+        "secondary": "德表高对比黑白",
+        "accent": "深渊黑 #0a0a0f"
+      },
+      "lighting": "单一致光源，冷调，蓝灰",
+      "composition": "极简构图，阴影分割画面",
+      "rhythm": "长镜头凝视，硬切断，静默",
+      "texture": "高对比，钢蓝调",
+      "directors": ["北野武", "German Expressionism"],
+      "keywords": ["暴力", "沉默", "萧索", "阴影"]
+    },
+    "A4": {
+      "name": "李安 × Western Modernism",
+      "fusion_core": "东方克制 × 视觉诗意",
+      "palette": {
+        "primary": "Magic Hour Gold #D4A574",
+        "secondary": "克制蓝 #4A6670",
+        "accent": "Rain Grey #828A82"
+      },
+      "lighting": "暖黄自然光，隐忍单光源",
+      "composition": "情感负空间，风景尺度人物",
+      "rhythm": "慢速电影感，情感积累",
+      "texture": "自然写实，温暖克制",
+      "directors": ["李安", "Western Modernism"],
+      "keywords": ["隐忍", "诗意", "东方", "情感"]
+    }
+  },
+  "combinations": {
+    "B1×A1": {
+      "fusion_core": "禅意剧院——古典构图溶入梦境",
+      "palette": {"primary": "#6B5344", "secondary": "#7A8B8F", "accent": "#8B3A3A"},
+      "lighting": "侧逆光 casting amber god rays through smoke",
+      "composition": "70% negative space, minimalist King Hu composition",
+      "rhythm": "surreal stillness, celestial theater",
+      "texture": "Kodak Ektachrome 1970s, 35mm coarse grain",
+      "mj_params": {"ar": "21:9", "s_range": [180, 250], "c_range": [20, 35], "weird_range": [80, 120]},
+      "sample_prompts": [
+        "Ancient temple courtyard, stones breathing with slow organic pulsation, moss developing in biomorphic patterns, Rothko-style color zones, wooden prayer beads floating mid-air, defying gravity, pale grey-blue mist color field, edges dissolving into void, side-backlight casting amber god rays through smoke, 70% negative space, minimalist King Hu composition, Kodak Ektachrome 1970s, 35mm coarse grain, surreal stillness, objects gaining life, celestial theater",
+        "Bamboo forest clearing, two swordsmen frozen mid-strike, sword blades transforming into organic coral tendrils, deep crimson color field expanding from center, Rothko intensity, smoke scattering side-backlight, theatrical god rays, time crystallized in martial arts frozen moment, biomorphic surrealism, wuxia dream logic"
+      ]
+    },
+    "B1×A2": {
+      "fusion_core": "记忆色场——记忆作为呼吸的有机体",
+      "palette": {"primary": "#2A4B5C", "secondary": "#D4527A", "accent": "#C9A86C"},
+      "lighting": "neon bleeding into monumental color fields",
+      "composition": "handheld camera drifting, step-printing slow motion",
+      "rhythm": "Wong Kar-wai blue hour, surreal nocturnal organism",
+      "texture": "neon tubes transforming into organic tendrils, breathing light",
+      "mj_params": {"ar": "2.35:1", "s_range": [600, 750], "c_range": [35, 50], "weird_range": [300, 450]},
+      "sample_prompts": [
+        "Rain-soaked Hong Kong alley, neon signs bleeding into monumental color fields, magenta and cyan zones colliding like Rothko canvases, neon tubes transforming into organic tendrils, breathing light, handheld camera drifting, step-printing slow motion, Wong Kar-wai blue hour aesthetic, amber and teal color contrast, surreal nocturnal organism, urban landscape as living entity",
+        "Giant clock melting over nocturnal cityscape, bronze dripping, time losing rigid structure becoming soft and organic, deep crimson color field dominating upper frame, Rothko intensity, mycelium cracks spreading through clock face, bioluminescent, Wong Kar-wai urban isolation, objects becoming alive"
+      ]
+    },
+    "B1×A3": {
+      "fusion_core": "沉默有机体——暴力转化为生物诗歌",
+      "palette": {"primary": "#0a0a0f", "secondary": "#2d3a4a", "accent": "#8b3a3a"},
+      "lighting": "Takeshi Kitano aesthetic, muted blue-grey, single cold light source",
+      "composition": "static long take, camera fixed, monumental Rothko void",
+      "rhythm": "violence suspended, theatrical stillness",
+      "texture": "blood drops becoming organic blooms",
+      "mj_params": {"ar": "21:9", "s_range": [250, 350], "c_range": [15, 30], "weird_range": [80, 130]},
+      "sample_prompts": [
+        "Violent moment frozen mid-air, blood transforming into coral structures, dark crimson expanding into monolithic black color field, blood drops becoming organic blooms, biological violence, static long take, camera fixed, violence suspended, Takeshi Kitano aesthetic, muted blue-grey palette, monumental Rothko void, theatrical stillness",
+        "Figure at seashore, grey-blue infinite color field, ocean transforming into cellular mass, slow breathing organism, sky as monolithic grey void, no horizon line, Takeshi Kitano contemplative long take, 15-second static shot, surreal coastal isolation, organism and void merging"
+      ]
+    },
+    "B1×A4": {
+      "fusion_core": "压抑的潮汐——情感作为受限的有机件",
+      "palette": {"primary": "#D4A574", "secondary": "#4A6670", "accent": "#8B3A3A"},
+      "lighting": "Magic Hour Gold, Ang Lee emotional restraint, mist as living entity",
+      "composition": "vast sky, tiny human silhouettes, Rothko loneliness",
+      "rhythm": "emotional restraint, slow organic movement",
+      "texture": "clouds developing organic cellular texture",
+      "mj_params": {"ar": "1.85:1", "s_range": [180, 250], "c_range": [15, 30], "weird_range": [50, 80]},
+      "sample_prompts": [
+        "Brokeback Mountain landscape, infinite blue-grey color field, clouds developing organic cellular texture, slow movement, two figures as tiny silhouettes against monumental sky, deep cobalt to pale grey gradient, Rothko loneliness, Ang Lee emotional restraint, mist as living entity",
+        "Close-up of hands almost touching, skin developing organic texture, warm amber to deep crimson color field, desire as entity, fingers transforming into coral structures reaching, half-face in shadow, Ang Lee forbidden tension, surreal embodiment of desire, organism of longing"
+      ]
+    },
+    "B2×A1": {
+      "fusion_core": "寺庙全息——古典被数字污染",
+      "palette": {"primary": "大地色50%", "secondary": "赛博霓虹20%", "accent": "RGB故障10%"},
+      "lighting": "earth tones with amber lantern glow, holographic interference",
+      "composition": "Op Art geometric条纹 overlay on classical composition",
+      "rhythm": "contemplative stillness interrupted by glitch fragmentation",
+      "texture": "film grain fighting digital signal, RGB splitting",
+      "mj_params": {"ar": "2.35:1", "s_range": [700, 750], "c_range": null, "weird_range": null},
+      "sample_prompts": [
+        "King Hu × Hollywood, cyberpunk holographic monks in bamboo temple, digital artifact corruption, earth tones with amber lantern glow, side-backlighting through incense smoke, holographic interference patterns, Op Art geometric条纹 overlay on classical composition, RGB splitting on temple architecture, film grain fighting digital signal, contemplative stillness interrupted by glitch fragmentation"
+      ]
+    },
+    "B2×A2": {
+      "fusion_core": "霓虹雨夜跳切——时间破碎=记忆破碎",
+      "palette": {"primary": "WKW琥珀/橙红35%", "secondary": "深青/品红30%", "accent": "RGB故障10%"},
+      "lighting": "WKW amber/orange neon vs cyberpunk deep teal and magenta",
+      "composition": "handheld unstable, jump cut rhythm",
+      "rhythm": "frames dropping, RGB splitting on faces",
+      "texture": "Op Art震动条纹渗透画面边缘",
+      "mj_params": {"ar": "16:9", "s_range": [550, 600], "c_range": null, "weird_range": null},
+      "sample_prompts": [
+        "Wong Kar-wai × French New Wave × Cyberpunk glitch, rain-soaked neon street, handheld camera unstable, jump cut rhythm, WKW amber/orange neon vs cyberpunk deep teal and magenta, character standing still while neon crowds blur past, glitch fragmentation: frames dropping, RGB splitting on faces, Op Art震动条纹渗透画面边缘"
+      ]
+    },
+    "B2×A3": {
+      "fusion_core": "表现主义阴影码头——压抑暴力泄漏为故障",
+      "palette": {"primary": "北野武蓝灰40%", "secondary": "德表高对比黑白30%", "accent": "赛博冷蓝/电紫20%"},
+      "lighting": "German Expressionist chiaroscuro, theatrical shadow, digital interference",
+      "composition": "extreme minimalist, deep noir shadows",
+      "rhythm": "violence has happened, silence as aftermath",
+      "texture": "Op Art geometric patterns emerging from shadows",
+      "mj_params": {"ar": "16:9", "s_range": [450, 500], "c_range": null, "weird_range": null},
+      "sample_prompts": [
+        "Takeshi Kitano × German Expressionism × Cyberpunk glitch, quiet seaside pier, extreme minimalist composition, German Expressionist chiaroscuro: theatrical shadow dramatic contrast, cold blue-grey tones digital interference, deep noir shadows with cyberpunk neon reflection, Op Art geometric patterns emerging from shadows, violence has happened, silence as aftermath"
+      ]
+    },
+    "B2×A4": {
+      "fusion_core": "数字入侵厨房——情感压抑=数据损坏",
+      "palette": {"primary": "李安暖黄/大地色35%", "secondary": "西方现代黑白30%", "accent": "赛博冷蓝/数据绿25%"},
+      "lighting": "Ang Lee emotional restraint, single overhead light harsh shadows",
+      "composition": "traditional domestic scene invaded by data streams",
+      "rhythm": "memory corruption, glitch artifacts on family photographs",
+      "texture": "RGB splitting on warm food colors, digital interference",
+      "mj_params": {"ar": "16:9", "s_range": [500, 550], "c_range": null, "weird_range": null},
+      "sample_prompts": [
+        "Ang Lee × Western Modernism × Cyberpunk glitch, traditional family kitchen, warm earth tones domestic intimacy, Ang Lee emotional restraint single overhead light harsh shadows, cyberpunk data streams infiltrating kitchen space, glitch artifacts on family photographs: memory corruption, RGB splitting on warm food colors, digital interference, Op Art geometric grid overlay on domestic scene"
+      ]
+    },
+    "B3×A1": {
+      "fusion_core": "记忆宫殿影院——古典构图溶入像素",
+      "palette": {"primary": "Amber Gold #FFBF00", "secondary": "Celadon #88B892", "accent": "Hot pink neon"},
+      "lighting": "golden age Hollywood three-point with warm amber lanterns",
+      "composition": "vaporwave CRT scanline overlay, ancient dissolving into pixel",
+      "rhythm": "liminal space with no escape, nostalgic longing",
+      "texture": "1970s Technicolor restoration film grain",
+      "mj_params": {"ar": "2.35:1", "s_range": [250, 300], "c_range": null, "weird_range": null},
+      "sample_prompts": [
+        "Dreamcore liminal temple courtyard at dusk, King Hu classical composition, golden age Hollywood three-point lighting with warm amber lanterns, vaporwave CRT scanline overlay ancient architecture dissolving into pixel blocks, pink neon glow bleeding through mist, Surrealist impossible perspective, cinematic 2.35:1 film grain from 1970s Technicolor restoration, liminal space with no escape, nostalgic longing"
+      ]
+    },
+    "B3×A2": {
+      "fusion_core": "雨日梦arcade——手持亲密与VHS追踪错误融合",
+      "palette": {"primary": "Rouge cinema #E02141", "secondary": "Neon teal #00F5D4", "accent": "Magenta oversaturation"},
+      "lighting": "WKW handheld, neon teal and rouge cinema",
+      "composition": "French New Wave jump cut frozen mid-frame, endless 1990s mall",
+      "rhythm": "rain droplets suspended like digital artifacts",
+      "texture": "CRT tracking errors and color bleeding",
+      "mj_params": {"ar": "1.85:1", "s_range": [200, 300], "c_range": null, "weird_range": null},
+      "sample_prompts": [
+        "Wong Kar-wai handheld in rain-soaked Hong Kong corridor, Dreamcore soft focus, vaporwave CRT tracking errors and color bleeding, French New Wave jump cut frozen mid-frame surrealist endless 1990s mall corridor, neon teal and rouge cinema lighting, rain droplets suspended like digital artifacts, liminal space with no exit, soft grain, oversaturated colors bleeding at edges"
+      ]
+    },
+    "B3×A3": {
+      "fusion_core": "宁静 doom arcade——禅意被蒸汽波衰减打断",
+      "palette": {"primary": "Blood burgundy #800020", "secondary": "Steel blue #4A90A4", "accent": "neon edge bleeding"},
+      "lighting": "Takeshi Kitano minimalist, German Expressionist harsh geometric shadows",
+      "composition": "Dreamcore amber pastel from single source",
+      "rhythm": "surrealist impossible window showing infinite pink sky",
+      "texture": "vaporwave CRT color bleeding at shadow edges",
+      "mj_params": {"ar": "2.35:1", "s_range": [250, 300], "c_range": null, "weird_range": null},
+      "sample_prompts": [
+        "Takeshi Kitano minimalist yakuza office, German Expressionist harsh geometric shadows, Dreamcore amber pastel lighting from single source, vaporwave CRT color bleeding at shadow edges, surrealist impossible window showing infinite pink sky, blood burgundy and steel blue palette, violent stillness atmosphere, liminal space between honor and dream"
+      ]
+    },
+    "B3×A4": {
+      "fusion_core": "情感考古——家庭时刻在边缘像素化",
+      "palette": {"primary": "Memory blue #5C9EAD", "secondary": "Kitchen tungsten #FFE4C9", "accent": "Psychological violet"},
+      "lighting": "Western Modernist painterly, CRT scanline overlay",
+      "composition": "surrealist kitchen extending into infinite corridor",
+      "rhythm": "family members slightly pixelated at edges",
+      "texture": "VHS tracking errors on family scene",
+      "mj_params": {"ar": "1.85:1", "s_range": [200, 300], "c_range": null, "weird_range": null},
+      "sample_prompts": [
+        "Ang Lee intimate family dinner scene, Dreamcore soft focus, vaporwave VHS tracking errors and color bleeding, Western Modernist painterly composition with fragmented time, surrealist kitchen extending into infinite corridor, memory blue and kitchen tungsten lighting, CRT scanline overlay, family members slightly pixelated at edges"
+      ]
+    },
+    "B4×A1": {
+      "fusion_core": "禅意剧院——几何克制放大禅意静谧",
+      "palette": {"primary": "Warm white #F5E6D3", "secondary": "Aged brass #C9A227", "accent": "Hu pale cyan #7BA3A8"},
+      "lighting": "late afternoon side-backlight, Kodak Ektachrome palette",
+      "composition": "elongated geometric shadows through latticed screens",
+      "rhythm": "quiet luxury, subtle film grain",
+      "texture": "Neoclassical proportions in Art Deco frame",
+      "mj_params": {"ar": "2.35:1", "s_range": [150, 250], "c_range": null, "weird_range": null},
+      "sample_prompts": [
+        "Lone figure in sparse pagoda interior, late afternoon side-backlight, elongated geometric shadows through latticed screens, Kodak Ektachrome 1970s palette: pale cyan wash earth ochre warm shadow, Neoclassical proportions in Art Deco frame, Cinematic 2.35:1 subtle film grain quiet luxury"
+      ]
+    },
+    "B4×A2": {
+      "fusion_core": "霓虹几何——B4抑制WKW的霓虹过度",
+      "palette": {"primary": "Flesh tones #E8C4A0", "secondary": "Amber streetlight #FFB347", "accent": "Night blue-black #0D1B2A"},
+      "lighting": "Wong Kar-wai color memory: faded jade amber night blue",
+      "composition": "geometric romance, pure lines no crowd",
+      "rhythm": "Art Deco elegance, restrained",
+      "texture": "slight Dutch angle, French New Wave influence",
+      "mj_params": {"ar": "16:9", "s_range": [180, 220], "c_range": null, "weird_range": null},
+      "sample_prompts": [
+        "Empty Art Deco corridor late 1940s Shanghai, single neon tube, geometric patterns on neoclassical walls, Wong Kar-wai color memory: faded jade amber night blue, B4 restraint: no crowd no chaos pure geometric romance, French New Wave influenced composition with slight Dutch angle"
+      ]
+    },
+    "B4×A3": {
+      "fusion_core": "线条——几何暴力",
+      "palette": {"primary": "Harsh white #FFF8E7", "secondary": "Pure black #0A0A12", "accent": "Munich grey #4A4A5A"},
+      "lighting": "German Expressionist chiaroscuro pools, single overhead harsh key",
+      "composition": "Art Deco geometric backdrop pure black and ivory",
+      "rhythm": "Kitano zen violence in B4 restraint, hard shadow lines",
+      "texture": "Platinum accents, no motion, dread",
+      "mj_params": {"ar": "2.35:1", "s_range": [180, 250], "c_range": null, "weird_range": null},
+      "sample_prompts": [
+        "Two figures in absolute stillness on minimalist concrete stage, single overhead harsh key light creating German Expressionist chiaroscuro pools, Art Deco geometric backdrop reduced to pure black and ivory, Kitano zen violence in B4 restraint hard shadow lines dividing frame, platinum accents cinematic 2.35:1 no motion dread"
+      ]
+    },
+    "B4×A4": {
+      "fusion_core": "远方抵达——情感在负空间中",
+      "palette": {"primary": "Warm white #FAF7F2", "secondary": "Sage green #9CAF88", "accent": "Slate #4A5568"},
+      "lighting": "Ang Lee emotional scale, natural light",
+      "composition": "vast landscape tiny human, golden ratio 70% negative space",
+      "rhythm": "slow cinema potential, emotional restraint",
+      "texture": "subtle earth tones, Western Modernist palette",
+      "mj_params": {"ar": "2.35:1", "s_range": [160, 200], "c_range": null, "weird_range": null},
+      "sample_prompts": [
+        "Highways stretching to distant mountains, single car as small element, Ang Lee emotional scale vast landscape tiny human presence, B4 neoclassical composition golden ratio placement 70% negative space, Western Modernist palette sage slate warm ivory, subtle earth tones slow cinema potential natural light"
+      ]
+    },
+    "B5×A1": {
+      "fusion_core": "童梦荒山——武侠童梦的破碎",
+      "palette": {"primary": "#E8B4CB", "secondary": "#E8D4D4", "accent": "#C4D4C4"},
+      "lighting": "overexposed morning light, pale cyan mist",
+      "composition": "weirdcore proportion distortion, small figure huge temple",
+      "rhythm": "slow meditation drift, unsettling beauty",
+      "texture": "35mm film grain, liminal space",
+      "mj_params": {"ar": "2.35:1", "s_range": [300, 400], "c_range": [30, 40], "weird_range": [90, 120]},
+      "sample_prompts": [
+        "Abandoned mountain temple endless pathway, childhood toys scattered among ancient stones, pale cyan mist overexposed morning light, marble statue of a girl holding teddy bear, weirdcore proportion distortion small figure huge temple, earth tones fading into pastel pink, King Hu aesthetic 35mm film grain liminal space, slow meditation drift unsettling beauty"
+      ]
+    },
+    "B5×A2": {
+      "fusion_core": "霓虹童梦——童年噩梦",
+      "palette": {"primary": "#C9D4D8", "secondary": "#F5D0E0", "accent": "#B4C4B4"},
+      "lighting": "Wong Kar-wai amber and teal shadows, bloodless palette",
+      "composition": "childcore balloon floating in rain, room full of stuffed animals",
+      "rhythm": "step-printing slow motion, neon sign flickering",
+      "texture": "palecore skin bloodless porcelain, clock showing wrong time",
+      "mj_params": {"ar": "2.35:1", "s_range": [500, 600], "c_range": [35, 45], "weird_range": [100, 130]},
+      "sample_prompts": [
+        "Woman in 1960s qipao face of a child, Wong Kar-wai color amber and teal shadows, palecore skin bloodless porcelain, childcore balloon floating in rain, room full of stuffed animals rotting, weirdcore time clock showing wrong time, step-printing slow motion neon sign flickering, lost innocence"
+      ]
+    },
+    "B5×A3": {
+      "fusion_core": "窒息蓝天童——纯真丧失",
+      "palette": {"primary": "#E8DDD4", "secondary": "#E8E0D5", "accent": "#E8B4B8"},
+      "lighting": "high contrast, pure black shadows, paleeverything",
+      "composition": "child's bedroom after violence, weirdcore proportions wrong",
+      "rhythm": "Beat Takeshi 20 second static shot, silence before horror",
+      "texture": "worn red scarf on floor only color, plush bear face scratched off",
+      "mj_params": {"ar": "2.35:1", "s_range": [200, 300], "c_range": [15, 20], "weird_range": [50, 80]},
+      "sample_prompts": [
+        "Beat Takeshi static shot 20 seconds, child's bedroom after violence, palecore everything walls sheets toys, worn red scarf on floor only color, childcore plush bear face scratched off, weirdcore proportions wrong room too large, high contrast pure black shadows, silence before after horror"
+      ]
+    },
+    "B5×A4": {
+      "fusion_core": "家庭餐桌童物——成长噩梦",
+      "palette": {"primary": "#E8B4CB", "secondary": "#E8DDD4", "accent": "#C4D4C4"},
+      "lighting": "Ang Lee, earth tones with ash overlay, palecore sky",
+      "composition": "child's shirt hanging never will be worn, two balloons grey",
+      "rhythm": "emotional restraint silence loss, childcore innocence never happened",
+      "texture": "weirdcore shirt too small for who it was",
+      "mj_params": {"ar": "2.35:1", "s_range": [300, 400], "c_range": [20, 30], "weird_range": [70, 90]},
+      "sample_prompts": [
+        "Brokeback Mountain landscape Ang Lee, child's shirt hanging never will be worn, palecore sky and mountains bloodless, weirdcore shirt too small for who it was, two balloons tied to fence grey, emotional restraint silence loss, childcore innocence never happened, earth tones with ash overlay"
+      ]
+    }
+  }
+}

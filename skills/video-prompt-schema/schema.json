@@ -1,0 +1,379 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "白梦客视频提示词Schema",
+  "description": "结构化视频提示词标准格式，支持多平台(Seedance/Vidu/海螺)生成",
+  "version": "1.0",
+  "type": "object",
+  "required": ["meta", "scenes", "output"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "description": "项目元信息",
+      "required": ["title", "platform", "duration", "style_line"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "项目标题"
+        },
+        "platform": {
+          "type": "string",
+          "enum": ["seedance", "vidu", "hairui", "kling"],
+          "description": "目标平台"
+        },
+        "duration": {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 180,
+          "description": "总时长(秒)"
+        },
+        "style_line": {
+          "type": "string",
+          "enum": ["高定线", "通用线"],
+          "description": "白梦客美学风格线"
+        },
+        "industry": {
+          "type": "string",
+          "description": "行业分类"
+        },
+        "director_style": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["王家卫", "胡金铨", "北野武", "李安", "侯孝贤", "今敏", "塔可夫斯基", "小津安二郎"]
+          },
+          "description": "导演风格引用"
+        },
+        "case_id": {
+          "type": "string",
+          "description": "关联案例ID(如有)"
+        }
+      }
+    },
+
+    "palette": {
+      "type": "object",
+      "description": "色调配方",
+      "required": ["primary", "secondary", "accent"],
+      "properties": {
+        "primary": {
+          "type": "string",
+          "description": "主色调(含百分比)"
+        },
+        "secondary": {
+          "type": "string",
+          "description": "辅助色(含百分比)"
+        },
+        "accent": {
+          "type": "string",
+          "description": "点缀色(含百分比)"
+        }
+      }
+    },
+
+    "lighting": {
+      "type": "object",
+      "description": "光影设置",
+      "required": ["type", "direction", "atmosphere"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["自然光", "侧逆光", "单一强光源", "霓虹漫射", "戏剧性火光", "冷蓝顶光"],
+          "description": "光源类型"
+        },
+        "direction": {
+          "type": "string",
+          "enum": ["侧逆光", "逆光", "侧光", "正面光", "顶光", "底光"],
+          "description": "光源方向"
+        },
+        "atmosphere": {
+          "type": "string",
+          "enum": ["烟雾缭绕", "干净利落", "高对比", "柔和漫射", "明暗对比强烈"],
+          "description": "氛围"
+        }
+      }
+    },
+
+    "texture": {
+      "type": "object",
+      "description": "质感参数",
+      "properties": {
+        "film": {
+          "type": "string",
+          "enum": ["Kodak Ektachrome 1970s", "16mm胶片", "35mm胶片", "数字中间片"],
+          "description": "胶片质感"
+        },
+        "aspect_ratio": {
+          "type": "string",
+          "enum": ["16:9", "2.35:1", "4:3", "1:1", "9:16"],
+          "description": "画幅比例"
+        },
+        "overexposure": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2,
+          "description": "过曝档数(0.3=过曝1/3档)"
+        },
+        "grain": {
+          "type": "string",
+          "enum": ["无", "轻微", "中等", "明显"],
+          "description": "颗粒感"
+        }
+      }
+    },
+
+    "scenes": {
+      "type": "array",
+      "description": "场景序列",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "timestamp", "subject", "action", "camera", "emotion"],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "场景序号"
+          },
+          "timestamp": {
+            "type": "string",
+            "pattern": "^\\[\\d{2}:\\d{2}-\\d{2}:\\d{2}\\]$",
+            "description": "时间戳格式 [mm:ss-mm:ss]"
+          },
+          "subject": {
+            "type": "object",
+            "description": "主体描述",
+            "required": ["type", "description"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["人物", "物体", "场景", "抽象"],
+                "description": "主体类型"
+              },
+              "description": {
+                "type": "string",
+                "description": "具体描述(详细,具体)"
+              },
+              "expression": {
+                "type": "string",
+                "description": "表情/情绪外化(人物时填写)"
+              },
+              "detail": {
+                "type": "string",
+                "description": "局部细节特写(可选)"
+              }
+            }
+          },
+          "action": {
+            "type": "object",
+            "description": "动作分解",
+            "required": ["description"],
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "核心动作描述"
+              },
+              "breakdown": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "子动作分解(如需)"
+              },
+              "tempo": {
+                "type": "string",
+                "enum": ["正常", "慢动作", "抽帧", "快节奏"],
+                "description": "动作节奏"
+              }
+            }
+          },
+          "camera": {
+            "type": "object",
+            "description": "运镜指令",
+            "required": ["movement", "angle"],
+            "properties": {
+              "movement": {
+                "type": "string",
+                "enum": ["固定", "推镜头", "拉镜头", "横移", "摇镜头", "升降", "跟随", "手持微动", "环绕"],
+                "description": "运动方式"
+              },
+              "angle": {
+                "type": "string",
+                "enum": ["平视", "俯拍", "仰拍", "低角度", "鸟瞰", "斜角"],
+                "description": "摄影角度"
+              },
+              "distance": {
+                "type": "string",
+                "enum": ["远景", "全景", "中景", "近景", "特写", "大特写"],
+                "description": "景别"
+              },
+              "composition": {
+                "type": "string",
+                "enum": ["中心对称", "三分法", "负空间60%+", "前景遮挡", "极简留白", "打破构图"],
+                "description": "构图方式"
+              }
+            }
+          },
+          "style": {
+            "type": "object",
+            "description": "风格描述(可选,覆盖全局)",
+            "properties": {
+              "palette_override": {
+                "type": "string",
+                "description": "局部色调覆盖"
+              },
+              "lighting_override": {
+                "type": "string",
+                "description": "局部光影覆盖"
+              }
+            }
+          },
+          "emotion": {
+            "type": "object",
+            "description": "情绪目标",
+            "required": ["description", "intensity"],
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "情绪描述"
+              },
+              "intensity": {
+                "type": "string",
+                "enum": ["克制", "平静", "温暖", "强烈"],
+                "description": "情绪强度"
+              },
+              "rhythm": {
+                "type": "object",
+                "properties": {
+                  "plot": {
+                    "type": "string",
+                    "enum": ["loose", "medium", "tense"],
+                    "description": "事件密度"
+                  },
+                  "emotion": {
+                    "type": "string",
+                    "enum": ["light", "medium", "heavy"],
+                    "description": "情绪重量"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "rhythm": {
+      "type": "object",
+      "description": "整体节奏分配",
+      "properties": {
+        "long_take": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "长镜头百分比"
+        },
+        "slow_motion": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "慢动作百分比"
+        },
+        "quick_cut": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "快切百分比"
+        },
+        "silence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "静默留白百分比"
+        }
+      }
+    },
+
+    "audio": {
+      "type": "object",
+      "description": "声音设计指引",
+      "properties": {
+        "bgm": {
+          "type": "string",
+          "enum": ["氛围电子", "钢琴", "弦乐", "无", "自然音"],
+          "description": "BGM风格"
+        },
+        "volume": {
+          "type": "string",
+          "enum": ["极轻", "正常", "渐强", "渐弱"],
+          "description": "音量"
+        },
+        "sfx": {
+          "type": "string",
+          "description": "音效描述"
+        }
+      }
+    },
+
+    "output": {
+      "type": "object",
+      "description": "输出格式",
+      "required": ["language", "format"],
+      "properties": {
+        "platform": {
+          "type": "string",
+          "enum": ["seedance", "vidu", "hairui", "kling"],
+          "description": "目标平台"
+        },
+        "language": {
+          "type": "string",
+          "enum": ["中文", "英文", "中英混合"],
+          "description": "提示词语言"
+        },
+        "format": {
+          "type": "string",
+          "enum": ["structured", "timestamp_segmented", "freeform"],
+          "description": "输出格式"
+        },
+        "negative_prompt": {
+          "type": "string",
+          "description": "负向提示词(如需要)"
+        },
+        "style_reference": {
+          "type": "string",
+          "description": "风格参考描述"
+        }
+      }
+    },
+
+    "quality_checklist": {
+      "type": "object",
+      "description": "质量检查清单",
+      "properties": {
+        "platform_language_correct": {
+          "type": "boolean",
+          "description": "平台语言正确"
+        },
+        "duration_match_shots": {
+          "type": "boolean",
+          "description": "时长与镜头数匹配"
+        },
+        "palette_complete": {
+          "type": "boolean",
+          "description": "色调参数完整"
+        },
+        "lighting_clear": {
+          "type": "boolean",
+          "description": "光影描述清晰"
+        },
+        "camera_specific": {
+          "type": "boolean",
+          "description": "运镜指令具体"
+        },
+        "case_reference": {
+          "type": "boolean",
+          "description": "参考案例已标注"
+        }
+      }
+    }
+  }
+}

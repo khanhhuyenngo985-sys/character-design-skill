@@ -1,0 +1,4 @@
+[
+  {"id": 1, "prompt": "把这个分镜转成JSON Schema格式：竹林，侧逆光，女人缓慢走过", "expected": "结构化JSON，包含所有创作参数"},
+  {"id": 2, "prompt": "生成Seedance平台的提示词", "expected": "平台化输出，符合Seedance格式"}
+]

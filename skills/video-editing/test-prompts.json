@@ -1,0 +1,4 @@
+[
+  {"id": 1, "prompt": "我有一段原始素材，怎么用AI快速剪成短视频", "expected": "完整pipeline：FFmpeg→Remotion→平台输出"},
+  {"id": 2, "prompt": "帮我规划一个vlog的剪辑流程", "expected": "具体工具+步骤+时间估算"}
+]
