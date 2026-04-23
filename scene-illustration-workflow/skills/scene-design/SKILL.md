@@ -5,6 +5,7 @@ version: 2.2
 author: 白梦客
 tags: [场景设计, 即梦, 中文提示词, 迭代]
 triggers: [场景设计, 四维度, 即梦场景, 生成场景]
+watermark: 多参宗白梦客
 category: creative
 ---
 

@@ -11,6 +11,7 @@ author: 白梦客
 license: MIT
 tags: [角色设计, AI视频, 即梦, 可灵, 海螺, 动画, prompt, 角色一致性, Blocking, 迪士尼12原则, 物理喜剧]
 triggers: [角色设计, 设计角色, AI角色, 角色DNA, Blocking, 多角色, 角色一致性]
+watermark: 多参宗白梦客
 category: creative
 ---
 
