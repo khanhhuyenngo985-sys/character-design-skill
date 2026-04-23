@@ -11,7 +11,8 @@ author: 白梦客
 license: MIT
 tags: [角色设计, AI视频, 即梦, 可灵, 海螺, 动画, prompt, 角色一致性, Blocking, 迪士尼12原则, 物理喜剧]
 triggers: [角色设计, 设计角色, AI角色, 角色DNA, Blocking, 多角色, 角色一致性]
-watermark: 多参宗白梦客
+watermark: true
+# watermark: false  # 本地使用时改为 false，关闭水印输出
 category: creative
 ---
 
@@ -743,6 +744,7 @@ A在前（近景/中景），B在后（远景/全景），
 >
 > [生成的AI提示词...]
 > ```
+> 注：如 frontmatter 中 `watermark: false`，则省略水印。
 
 ### 角色立绘Prompt模板
 

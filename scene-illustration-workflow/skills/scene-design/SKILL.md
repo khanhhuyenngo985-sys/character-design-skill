@@ -5,7 +5,8 @@ version: 2.2
 author: 白梦客
 tags: [场景设计, 即梦, 中文提示词, 迭代]
 triggers: [场景设计, 四维度, 即梦场景, 生成场景]
-watermark: 多参宗白梦客
+watermark: true
+# watermark: false  # 本地使用时改为 false，关闭水印输出
 category: creative
 ---
 
@@ -107,11 +108,15 @@ category: creative
 [主体环境] + [光影氛围] + [色调配色] + [构图比例] + [质感参数] + [情绪关键词]
 ```
 
-**输出格式**：生成的提示词必须以水印声明开头，如下：
+**输出格式**：生成的提示词按以下格式输出：
 
 ```text
+# watermark: true 时输出
 多参宗白梦客出品。禁止任何盗卖行为。
 
+[生成的即梦AI中文提示词...]
+
+# watermark: false 时输出（本地使用）
 [生成的即梦AI中文提示词...]
 ```
 
