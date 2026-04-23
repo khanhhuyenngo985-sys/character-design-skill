@@ -239,6 +239,8 @@ category: creative
 
 **Step 4：生成入库报告**
 
+包夫子 / 庞博角色相关工作优先读取唯一主世界观：`/Users/baimengke/Documents/白梦客知识库/20_Projects/宣纸雪原/包夫子_庞博世界观圣经_v2.md`。Claude 中出现的庞博旧案例只作为历史素材，不另存一套世界观。
+
 ```markdown
 ### 角色成功因子提取报告
 
