@@ -1,6 +1,6 @@
 ---
 name: scene-design
-description: Use when designing, revising, diagnosing, or prompting AI-video scenes, 场景设计, 场景板, 环境设计, 空间动线, 建筑空间, 光影色彩, 场景锚点, @场景名, scene continuity, or scene drift in storyboard/image/video workflows.
+description: Use when designing, revising, diagnosing, or prompting AI-video scenes, 场景设计, 场景板, 环境设计, 空间动线, 建筑空间, 光影色彩, 武侠电影场景, 胡金铨/King Hu scene mood, director-style scene fusion, 场景锚点, @场景名, scene continuity, or scene drift in storyboard/image/video workflows.
 ---
 
 # Scene Design Runtime
@@ -10,6 +10,8 @@ description: Use when designing, revising, diagnosing, or prompting AI-video sce
 This is the lean runtime entry for scene design. The full manual remains available as on-demand knowledge, but the default path should produce a usable scene packet fast.
 
 Core principle: scene is not background. Scene is the physical container of worldview, emotion, blocking, and story consequence.
+
+For multi-shot or multi-segment AI video, distinguish the base location from the current scene state. The base scene preserves world identity and fixed anchors; the scene state preserves the specific shot's door/window status, traces, actor zone, camera opportunity, action lane, and before/after continuity.
 
 ## Output Contract
 
@@ -32,7 +34,39 @@ For most tasks, produce a compact scene packet:
 | Before / after continuity |  |
 | Forbidden drift |  |
 
-If the user asks for a prompt, include a prompt-ready scene anchor block after the packet.
+When scene continuity is important, also include a scene continuity ledger: base scene identity, fixed spatial map, door/window state, wall/surface state, ground traces, light/weather state, actor zone, camera axis, protected anchors, allowed change, and next scene state.
+
+If the user asks for a simple prompt, include a prompt-ready scene anchor block after the packet. If they need a reusable prompt packet, scene reference suite, or model-specific image prompt, hand off to `/Users/baimengke/.agents/skills/prompt-framework/references/scene-image-prompt.md`.
+
+For Seedance / 即梦 multi-reference video, do not treat one physical place as one unchanging `@Scene` across every 15-second segment. Return a base scene plus per-segment scene states when the camera, actor zone, door state, wall marks, ground traces, light, or continuity residue changes.
+
+For 胡金铨 / King Hu / 70年代武侠 / 文人武侠 scene mood, keep the scene packet mandatory and call `/Users/baimengke/.agents/skills/prompt-framework/references/midjourney-wuxia-aesthetic.md` only as a style/composition layer. The old knowledge base already has foreground obstruction, negative space, doorway light, side-backlighting, smoke/light rays, and earth/grey-blue palettes; the wuxia module simply organizes those atoms into a reusable cinema pack.
+
+For multi-director scene fusion, use `/Users/baimengke/.agents/skills/animation-studio/references/director-style-fusion-rules.md` first. This skill only turns the chosen style lanes into space, light, color, material, camera opportunities, and continuity anchors.
+
+## Plot Upstream Bridge
+
+Use the installed story skills as upstream diagnosis when the user provides raw story text, an IP outline, a sequence of beats, or asks for scenes that carry plot instead of only atmosphere.
+
+| Upstream need | Use | Convert into |
+| --- | --- | --- |
+| The story world, genre, and relationship pressure are unclear | `story-five-elements` | world rule / pressure, space type, fixed anchors, material logic |
+| The sequence needs scene-by-scene spatial tasks | `plot-keypoints` | narrative task, entrance / exit, actor activity zone, before / after continuity |
+| Visual continuity must survive later shots or segments | `animation-studio/references/story-fact-ledger.md` | fixed anchors, changed scene state, traces, next inherited state |
+| A story beat needs stronger visual readability | `screenwriting-methodology.md` or `visual-storytelling-director-gate.md` | first readable image, spatial pressure, action consequence |
+
+Translate plot findings into physical space:
+
+- A plot point becomes one scene task: establish, reveal, pressure, turn, release, or callback.
+- Conflict becomes distance, height, threshold, blocked path, hard light, crowd pressure, or object ownership.
+- Relationship power becomes who controls the entrance, center, seat, doorway, window, or highest platform.
+- A hook becomes the first readable image: confrontation, forbidden object, abnormal trace, open door, broken rule.
+- A cliffhanger becomes a changed scene state the next segment must inherit.
+- World rules become fixed anchors: architecture, signage, ritual objects, work surfaces, weather, light source, or material wear.
+- Story facts become scene anchors only when they affect action, blocking, traces, light, props, or before/after continuity.
+
+Do not design a beautiful empty setting. Every chosen anchor should help a character act, fail, hide, collide, discover, or change.
+Do not import short-drama assumptions unless the user explicitly asks for short drama; default to animation, film, concept, ad, or asset-production logic.
 
 ## Runtime Flow
 
@@ -61,6 +95,7 @@ If the user asks for a prompt, include a prompt-ready scene anchor block after t
 6. Handoff to storyboard or AI video.
    - Reduce the scene to stable anchors.
    - Name what must not change.
+   - For multi-segment video, name what has changed in this segment's scene state.
    - Use `@scene-name` consistently across storyboard and prompts.
 
 ## Narrative Task Map
@@ -93,6 +128,7 @@ For multi-shot scenes, repeat the `@SceneTag`, fixed anchor, and activity zone b
 - Is there a clear entry, exit, and activity zone?
 - Is the most important action staged in the clearest light or silhouette?
 - Can the model preserve the setting with 3-5 anchors?
+- Does the next scene inherit visible evidence from the previous scene before changing anything?
 - Does a prop or mark reveal story without dialogue?
 - Does the scene say too much, or leave useful space?
 - Does it connect to the previous and next scene?
@@ -117,7 +153,9 @@ Read `references/full-manual.md` only when needed. Search these section names:
 | Environmental storytelling | `环境叙事` |
 | Multi-scene flow | `场景串联`, `多场景协作` |
 | AI generation workflow | `AI生成工作流` |
+| 胡金铨系武侠电影场景 | `前景遮挡`, `负空间`, `门洞框光`, `侧逆光`, `大地苍青色`; then read `/Users/baimengke/.agents/skills/prompt-framework/references/midjourney-wuxia-aesthetic.md` for compact prompt use |
+| 导演风格融合场景 | `风格融合逻辑`, `五、导演电影 × 场景设计原则`; then read `/Users/baimengke/.agents/skills/animation-studio/references/director-style-fusion-rules.md` for source ratios and lane assignment |
 
 ## Animation-Studio Handoff
 
-When used inside `animation-studio`, return the compact scene packet and prompt anchors. Let `animation-studio` decide story structure, character packet, shot timing, and model segmentation.
+When used inside `animation-studio`, return the compact scene packet and prompt anchors. Let `animation-studio` decide story structure, character packet, shot timing, and model segmentation; let `prompt-framework` turn anchors into stable `SCENE_` or `SHOT_` prompt packets when needed.
