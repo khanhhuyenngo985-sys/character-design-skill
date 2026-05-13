@@ -1,0 +1,4 @@
+interface:
+  display_name: "Character Design 角色设计"
+  short_description: "AI视频/真人短剧角色资产、欧美casting、关系矩阵、类型角色包、服装状态与视频试镜流程"
+  default_prompt: "使用 $character-design 设计一个群像先行、带关系矩阵、身份增益、服装状态和视频可用性检查的真人短剧角色包。"

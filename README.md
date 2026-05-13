@@ -1,140 +1,133 @@
-# 🎭 Character Design Skill
+# Character + Scene Design Skills
 
-> AI时代角色设计技能。专注于写实风格的AI视频角色设计完整方法论。
+> 多参宗白梦客出品。禁止任何盗卖行为。
 
-[![Total Lines](https://img.shields.io/badge/Total%20Lines-5961-blue.svg)](#)
-[![Status](https://img.shields.io/badge/Status-Production%20Ready-green.svg)](#)
+This repository contains two production-oriented AI-video creative skills:
 
----
+- `character-design`: character DNA, live-action short-drama casting assets, bone/face anchors, relationship matrices, genre cast packs, wardrobe states, and video-readiness gates.
+- `scene-design`: scene packets, power-space architecture, vertical 9:16 blocking lanes, genre scene packs, scene state ladders, and scene video-readiness gates.
 
-## 📖 概述
+Both skills now use a lean runtime entry plus on-demand reference files. The default `SKILL.md` files stay small so agents can load them quickly; the full manuals remain available under `references/full-manual.md`.
 
-Character Design Skill 是一套完整的 AI 视频角色设计方法论，专为**即梦**、**可灵**、**海螺**等新一代 AI 视频生成平台优化。它提供从核心创意概念到最终 Prompt 生成的完整工作流，致力于解决 AI 角色生成中的"融合"、"变脸"以及"缺乏辨识度"等痛点。
+## What's New
 
-> [!TIP]
-> **🌟 设计范式转移**
-> 
-> 我们追求的不再是让角色讨人喜欢，而是让角色**令人难忘**。角色的价值完全取决于他与其他角色的**差异性**，而非自身的完美。
-> 
-> | 传统范式 | 🚀 新一代范式 |
-> | :--- | :--- |
-> | 让角色讨人喜欢 | **让人难忘（不完美、有缺陷、有争议）** |
-> | 单一原型模板 | **原型混搭（如：杀手+导师+爱人）** |
-> | 和谐近似配色 | **色彩暴力（高饱和、极端对比、色彩隔离）** |
-> | 固定单一站桩 | **姿态叙事（通过姿势体现心理与成长弧线）** |
+- Live-action overseas short-drama production workflow.
+- Western-market multicultural casting gates for MJ character asset libraries.
+- Bone / face-structure anchors to reduce generic beauty and ethnicity drift.
+- Institutional power design for trust, probate, DA, insurance, hospital, admissions, HOA, zoning, charity, and gala scenes.
+- Relationship matrices, genre cast packs, wardrobe state ladders, and video-readiness labels for characters.
+- Power-space architecture, vertical blocking lanes, scene state ladders, and scene video-readiness labels for locations.
 
----
-
-## 🚀 详细使用说明
-
-无论是作为个人知识库搜索查询，还是接入 AI Agent 自动化工作流，本技能库都提供了极高的灵活性。
-
-### 🤖 方式 1：在 Claude Code / Cursor 等 Agent 中直接调用
-
-当你在支持工具链的 AI 助手（如 Claude Code, Cursor, Windsurf）中时，可以通过唤起指令直接让 AI 读取本库精髓。
-
-```bash
-# 在 Claude Code 中直接执行技能
-/character-design
-
-# 或者自然语言请求示例：
-"请参考 character-design 技能，帮我设计一个反派角色的外貌与 Prompt。"
-"调用 character-design/SECTIONS/08_人物原型库.md，为我找一个符合'Trickster'原型的参考。"
-```
-
-### 🔍 方式 2：作为设计速查字典按需调阅
-
-当遇到特定的设计瓶颈时，直接查阅对应章节的内容来解决痛点：
-
-> [!IMPORTANT]
-> - **不知道从哪里开始？** → 阅读主入口 `SKILL.md` 的 [核心范式] 与 [完整设计流程]。
-> - **角色总是随机变脸？** → 查阅 `02_角色一致性维护.md` 获取"三层锚定系统"配置法。
-> - **多人同屏融合错乱？** → 查阅 `03_角色关系设计Blocking.md` 进行视线与站位对立设计。
-> - **色彩灰暗、容易算崩？** → 查阅 `01_角色DNA七字诀详解.md` 中的 [色彩暴力] 与色彩稳定性研究。
-
-### 📝 方式 3：套用现成的 AI Prompt 模板
-
-如果你只需要快速出图或生成视频片段，请直接复用 `06_AI提示词模板.md`：
-1. 找到合适的模板类型（例如角色立绘、动态镜头、情绪特写、群像交锋等）。
-2. 根据你的目标角色 DNA 填补对应元素即可粘贴到 AI 工具中使用。
-
----
-
-## 📂 内容分类结构
-
-本技能库采用模块化结构组织，方便不同需求下快速调取特定的子集方案：
+## Skill Paths
 
 ```text
-character-design/
-├── SKILL.md                              # 📍 核心主入口文件（890行）
-└── SECTIONS/                             # 📚 模块化知识章节库
-    ├── 01_角色DNA七字诀详解.md           # 从群像到细节的七维拆解
-    ├── 02_角色一致性维护.md              # 解决AI变脸的三层锚定法
-    ├── 03_角色关系设计Blocking.md        # 人物的镜头语言与站位空间学
-    ├── 04_表情系统与姿态设计.md          # 情绪/姿态同步联动的微表情规律
-    ├── 05_负面设计清单.md                # 避坑指南：各阶段的常见生成灾难
-    ├── 06_AI提示词模板.md                # ⚡ 复制即用的系统 Prompt 集合
-    ├── 07_中国传统角色设计.md            # 写实水墨风特辑：笔墨边缘与动态
-    ├── 08_人物原型库.md                  # 22 个经典影视/游戏精神原型拆解
-    ├── 09_完整设计流程.md                # 10 步设计法保姆级全流程带练
-    ├── 10_参考图哲学与IP宇宙.md          # 强约束的喂图技巧与高级IP化思维
-    ├── 11_群像设计专题.md                # 如何构建多主角的互补型差异化宇宙
-    └── 12_多智能体协作工作流.md          # 🤖 将单打独斗进阶为自动化的虚拟影视班底协作
+.agents/skills/
+├── character-design/
+│   ├── SKILL.md
+│   ├── agents/openai.yaml
+│   ├── README.md
+│   ├── SECTIONS/
+│   └── references/
+│       ├── full-manual.md
+│       ├── bone-face-structure-layer.md
+│       ├── frontloaded-character-assets.md
+│       ├── live-action-shortdrama-casting-assets.md
+│       └── shortdrama-character-production-system.md
+└── scene-design/
+    ├── SKILL.md
+    ├── agents/openai.yaml
+    ├── README.md
+    └── references/
+        ├── full-manual.md
+        └── live-action-shortdrama-scene-system.md
 ```
 
----
+## Install
 
-## 🌟 核心能力亮点
+Copy the skill folders into your agent skills directory:
 
-### 🧬 1. 角色 DNA 七字诀
-放弃堆砌形容词盲盒式抽卡，改用系统化标签进行强干预设计：
-`群像分布 → 原型混搭 → 姿态叙事 → 情绪联动 → 色彩暴力 → 服装锚定 → 极端对比`
+```bash
+mkdir -p ~/.agents/skills
+cp -R .agents/skills/character-design ~/.agents/skills/
+cp -R .agents/skills/scene-design ~/.agents/skills/
+```
 
-### 🔒 2. 角色一致性维护法
-解决 AI 视频逐镜头生成时的痛点，首创**三层系统锚定**：
-- **参考图**（绝对基准像素级控制）
-- **DNA标签**（语言文本侧强约束强化）
-- **镜头设计**（长宽远近空间相对位锚定向）
+For Claude Code-style layouts, copy them into your Claude skills directory instead:
 
-### 🎬 3. Blocking 视线与关系设计
-控制多角色场景中的相对站位与空间关系，告诉 AI 谁主导画面：
-- 涵盖 6 种经典构图法则与站位公式。
-- 分析 10 种视线隐喻：视线就是隐形的舞台叙事线。
+```bash
+mkdir -p ~/.claude/skills
+cp -R .agents/skills/character-design ~/.claude/skills/
+cp -R .agents/skills/scene-design ~/.claude/skills/
+```
 
-### 👥 4. 群像系统互补阵矩
-独立的角色并没有多维度意义，角色张力在对比网络中才会成立：
-全套性格、色彩、体型、姿态、原型的**五维互补矩阵**，以及最高效的画面色彩隔离方案。
+## Usage
 
-### 🚫 5. 负面排雷核对清单 (Negative Checklist)
-梳理 AI 生成 16 个高频致命失误，严格划分为：**设计前**、**提示词中**、**生成中**、**后期校验**阶段，将打回重画废案率压到最低。
+Ask naturally:
 
----
+```text
+Use character-design to create a stable AI-video character packet.
+Use scene-design to create a scene packet for a night market chase.
+帮我用 character-design 设计一个反派角色。
+帮我用 scene-design 设计一个可以连续出镜的场景。
+帮我做一组欧美真人短剧人物库，要求 MJ casting，全身，男女老少和多族裔都要有。
+帮我做 CEO revenge romance 的场景包，要有 boardroom、penthouse、hospital、gala 和竖屏 blocking。
+```
 
-## 🎯 适用场景推荐
+The agent should read only `SKILL.md` first. It should open `references/full-manual.md` or `SECTIONS/*.md` only when the task needs deeper method detail.
 
-| 具体使用场景 | 匹配度指数 |
-| :--- | :--- |
-| **AI 视频角色独立设计（即梦/可灵/海螺）** | ⭐⭐⭐⭐⭐ |
-| **写实风格数字人创作与迭代推演** | ⭐⭐⭐⭐⭐ |
-| **复杂的主次多角色（群像）互动画面创作** | ⭐⭐⭐⭐⭐ |
-| **游戏/影视前期详实的角色设定文档编写** | ⭐⭐⭐⭐ |
-| **中国传统水墨、武侠风格的角色定义** | ⭐⭐⭐⭐⭐ |
+## Output Style
 
----
+`character-design` usually returns a compact character packet:
 
-## 🔗 延伸阅读与配套生态
+- character tag
+- narrative function
+- silhouette / body / bone / face / hair anchors
+- color, costume, material, and prop anchors
+- posture, expression, action, relationship, and forbidden drift
+- relationship edges, genre cast-pack slot, wardrobe state ladder, and video-readiness label when producing short-drama systems
 
-- [白梦客知识库主页](https://github.com/baimengke/baimengke) —— 涵盖更多 AI 时代前沿创作理念
-- [场景设计技能库 (Scene Design Skill)](https://github.com/baimengke/scene-design-skill) —— 本库的最佳搭配框架，搭建"人物+宏大世界"的完整视觉体系
+`scene-design` usually returns a compact scene packet:
 
----
+- scene tag
+- narrative task
+- world pressure
+- layout, zones, entrances, exits
+- power-space mechanism and vertical blocking lane
+- fixed anchors, props, light, color, material
+- camera opportunities, continuity, and forbidden drift
+- scene state ladder, genre scene-pack slot, and scene video-readiness label when producing short-drama systems
 
-> [!NOTE]
-> **更新日志:** 
-> - **v5.0（2026-04-14）**: 新增群像互补设计专题；删除不适于写实的旧动画法则；重写并补充 AI 环境特有 Prompt 构架与 Blocking 站位法则！
-> - **v4.0**: 整合双源角色设计知识池，全系扩充 "负面清单" 以及视觉 Blocking 分析。
-> - **v1.0-3.0**: 核心框架与传统角色设计逻辑奠基。
+## Short-Drama Production Flow
 
-<div align="right">
-  <i>License under MIT</i>
-</div>
+```text
+Character library
+→ genre cast pack
+→ relationship matrix
+→ wardrobe state ladder
+→ character motion audition
+→ video-ready episode prompts
+
+Scene library
+→ genre scene pack
+→ power-space layout
+→ vertical blocking lane
+→ scene state ladder
+→ 5-10s scene motion test
+→ scene-video-ready episode prompts
+```
+
+## Git Workflow
+
+Use feature branches for updates and merge into `main` through pull requests. The `main` branch should be protected from force pushes and deletion.
+
+## Watermark
+
+The visible watermark is included in both skill runtimes and full manuals:
+
+```text
+多参宗白梦客出品。禁止任何盗卖行为。
+```
+
+## License
+
+Released under the MIT License unless a downstream package states otherwise.

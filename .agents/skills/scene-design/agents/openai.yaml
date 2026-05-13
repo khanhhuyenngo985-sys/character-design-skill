@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scene Design 场景设计"
+  short_description: "AI视频/真人短剧场景系统、权力空间、竖屏blocking、场景状态、视频试镜与稳定锚点"
+  default_prompt: "使用 $scene-design 设计一个可拍、可连续出镜、带权力空间、竖屏blocking、场景状态和视频试镜门的真人短剧场景包。"
