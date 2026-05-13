@@ -1,6 +1,6 @@
 ---
 name: scene-design
-description: Use when designing, revising, diagnosing, or prompting AI-video scenes, 场景设计, 场景板, 环境设计, 空间动线, 建筑空间, 光影色彩, 武侠电影场景, 胡金铨/King Hu scene mood, director-style scene fusion, 场景锚点, @场景名, scene continuity, or scene drift in storyboard/image/video workflows.
+description: Use when designing, revising, diagnosing, or prompting AI-video scenes, live-action short-drama scene systems, power-space architecture, genre scene packs, vertical blocking lanes, scene state ladders, scene video-readiness gates, 场景设计, 场景板, 真人短剧场景, 海外短剧场景库, 权力空间, 类型场景包, 竖屏blocking, 场景状态, 场景试镜, 环境设计, 空间动线, 建筑空间, 光影色彩, 武侠电影场景, 胡金铨/King Hu scene mood, director-style scene fusion, 场景锚点, @场景名, scene continuity, or scene drift in storyboard/image/video workflows.
 ---
 
 # Scene Design Runtime
@@ -12,6 +12,8 @@ This is the lean runtime entry for scene design. The full manual remains availab
 Core principle: scene is not background. Scene is the physical container of worldview, emotion, blocking, and story consequence.
 
 For multi-shot or multi-segment AI video, distinguish the base location from the current scene state. The base scene preserves world identity and fixed anchors; the scene state preserves the specific shot's door/window status, traces, actor zone, camera opportunity, action lane, and before/after continuity.
+
+For live-action overseas short dramas, scene design must become a production system: power-space architecture, 9:16 vertical blocking, recurring scene state, and video readiness. Read `references/live-action-shortdrama-scene-system.md` when the request mentions 欧美真人短剧, overseas short drama, scene library, Midjourney scene refs, vertical drama locations, boardroom / hospital / school / HOA / gala scenes, or asks whether scenes need experiments.
 
 ## Output Contract
 
@@ -26,10 +28,15 @@ For most tasks, produce a compact scene packet:
 | Layout / zones |  |
 | Entrance / exit |  |
 | Character activity zone |  |
+| Vertical blocking lane / 竖屏动线 | foreground pressure object, center actor lane, background power anchor, threshold axis, handoff zone |
+| Power-space mechanism / 权力空间机制 | who controls entry, seat, desk, bed, podium, document, or light |
 | Fixed anchors |  |
 | Narrative props |  |
 | Light direction / source |  |
 | Color / material logic |  |
+| Scene state ladder / 场景状态 | S0 normal order, S1 pressure setup, S2 humiliation, S3 reveal, S4 aftermath, S5 power reversal |
+| Genre scene pack slot / 类型场景槽位 | executive office, boardroom, law office, hospital corridor, admissions office, etc. |
+| Video readiness / 视频可用性 | scene_video_ready, needs_layout_lock, needs_light_lock, needs_prop_lock, image_only, reroll_scene |
 | Camera opportunities |  |
 | Before / after continuity |  |
 | Forbidden drift |  |
@@ -76,12 +83,14 @@ Do not import short-drama assumptions unless the user explicitly asks for short 
 2. Translate task into space.
    - What layout, height, distance, entry, exit, obstacle, or empty area makes the task physical?
    - A scene must affect action, not only mood.
+   - For short drama, identify who controls the door, desk, seat, bed, podium, document, or light.
 
 3. Choose actor zones.
    - Where does the character enter?
    - Where can they act?
    - Where do they fail, hide, collide, or land?
    - What stays fixed so movement reads?
+   - For 9:16, lock foreground pressure object, center actor lane, background power anchor, threshold axis, and handoff zone.
 
 4. Add narrative objects.
    - Use 1-3 props, marks, or traces that reveal world, habit, danger, relationship, or change.
@@ -97,6 +106,13 @@ Do not import short-drama assumptions unless the user explicitly asks for short 
    - Name what must not change.
    - For multi-segment video, name what has changed in this segment's scene state.
    - Use `@scene-name` consistently across storyboard and prompts.
+
+7. For overseas short-drama production, run the scene system gate.
+   - Build a genre scene pack before writing episode prompts; keep recurring locations small and reusable.
+   - Assign each location a power mechanism: corporate, legal, medical, education, civic, church, gala, or family wealth.
+   - Create a scene state ladder: normal order, pressure setup, humiliation, reveal, aftermath, power reversal.
+   - Test core locations with a 5-10 second motion audition before labeling them scene_video_ready.
+   - For the detailed method, read `references/live-action-shortdrama-scene-system.md`.
 
 ## Narrative Task Map
 
@@ -132,6 +148,11 @@ For multi-shot scenes, repeat the `@SceneTag`, fixed anchor, and activity zone b
 - Does a prop or mark reveal story without dialogue?
 - Does the scene say too much, or leave useful space?
 - Does it connect to the previous and next scene?
+- For vertical short drama, is there a clear 9:16 actor lane and readable first 3-second power image?
+- Does the scene have a specific institutional or social power function, not just luxury decor?
+- Can a character enter, be blocked, hand over a document, reveal evidence, or reverse power inside this layout?
+- Are door, window, desk, bed, podium, or table positions stable enough for a video test?
+- Does the scene state preserve traces and changed object positions instead of resetting clean?
 
 ## Deep References
 
@@ -153,6 +174,7 @@ Read `references/full-manual.md` only when needed. Search these section names:
 | Environmental storytelling | `环境叙事` |
 | Multi-scene flow | `场景串联`, `多场景协作` |
 | AI generation workflow | `AI生成工作流` |
+| Live-action short-drama scene system / 真人短剧场景库、权力空间、类型场景包、竖屏blocking、场景状态、场景试镜 | `references/live-action-shortdrama-scene-system.md` |
 | 胡金铨系武侠电影场景 | `前景遮挡`, `负空间`, `门洞框光`, `侧逆光`, `大地苍青色`; then read `/Users/baimengke/.agents/skills/prompt-framework/references/midjourney-wuxia-aesthetic.md` for compact prompt use |
 | 导演风格融合场景 | `风格融合逻辑`, `五、导演电影 × 场景设计原则`; then read `/Users/baimengke/.agents/skills/animation-studio/references/director-style-fusion-rules.md` for source ratios and lane assignment |
 
